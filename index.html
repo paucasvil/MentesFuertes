@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campamento Mentes Fuertes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #000;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #1836b2;
+            color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header .date-banner {
+            background: #a066cb;
+            color: #ffffff;
+            font-weight: bold;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #ffffff;
+            color: #1836b2;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #a066cb;
+            color: #ffffff;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .countdown div {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .countdown div span {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .details {
+            background: #1836b2;
+            color: #ffffff;
+        }
+
+        .details img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .details img:hover {
+            transform: scale(1.05);
+        }
+
+        .details p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .info-icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .info-icons div {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .info-icons div i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #1836b2;
+        }
+
+        footer a {
+            color: #1836b2;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #0c1b57;
+        }
+
+        footer p {
+            margin: 10px 0 0;
+            font-size: 0.9rem;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #1836b2;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a066cb;
+        }
+
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+    </style>
+    <script>
+        function startCountdown() {
+            const targetDate = new Date('2025-01-31T18:00:00');
+            const countdownElements = {
+                days: document.getElementById('days'),
+                hours: document.getElementById('hours'),
+                minutes: document.getElementById('minutes'),
+                seconds: document.getElementById('seconds')
+            };
+
+            function updateCountdown() {
+                const now = new Date();
+                const timeDiff = targetDate - now;
+
+                if (timeDiff <= 0) {
+                    clearInterval(interval);
+                    countdownElements.days.textContent = '0';
+                    countdownElements.hours.textContent = '0';
+                    countdownElements.minutes.textContent = '0';
+                    countdownElements.seconds.textContent = '0';
+                    return;
+                }
+
+                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+                countdownElements.days.textContent = days;
+                countdownElements.hours.textContent = hours;
+                countdownElements.minutes.textContent = minutes;
+                countdownElements.seconds.textContent = seconds;
+            }
+
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown();
+        }
+
+        document.addEventListener('DOMContentLoaded', startCountdown);
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#"><i class="fas fa-home"></i></a>
+        <a href="#details"><i class="fas fa-info-circle"></i></a>
+        <a href="mailto:aspirantes@academiamentesfuertes.com"><i class="fas fa-envelope"></i></a>
+    </nav>
+
+    <header>
+        <div class="date-banner">31 Enero 2025 | Torreón, Coahuila</div>
+        <h1>Campamento Mentes Fuertes</h1>
+        <p>¡Prepárate para una experiencia inolvidable!</p>
+        <a href="#details" class="btn">Conoce más</a>
+
+        <div class="countdown">
+            <div>
+                <span id="days">0</span>
+                Días
+            </div>
+            <div>
+                <span id="hours">0</span>
+                Horas
+            </div>
+            <div>
+                <span id="minutes">0</span>
+                Minutos
+            </div>
+            <div>
+                <span id="seconds">0</span>
+                Segundos
+            </div>
+        </div>
+    </header>
+
+    <section class="details" id="details">
+        <h2>Detalles del Campamento</h2>
+        <p>¡Únete a nosotros!</p>
+
+        <div class="info-icons">
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Torreón, Coahuila</p>
+            </div>
+            <div>
+                <i class="fas fa-clock"></i>
+                <p>6:00 PM</p>
+            </div>  
+            <div>
+                <i class="fas fa-envelope"></i>
+                <p><a href="mailto:aspirantes@academiamentesfuertes.com" style="color: #ffffff; text-decoration: underline;">aspirantes@academiamentesfuertes.com</a></p>
+            </div>
+            <div>
+                <i class="fab fa-whatsapp"></i>
+                <p><a href="https://wa.me/1234567890" style="color: #ffffff; text-decoration: underline;">WhatsApp</a></p>
+            </div>
+        </div>
+
+        <img src="https://via.placeholder.com/800x400" alt="Campamento">
+    </section>
+
+    <footer>
+        <a href="https://www.tiktok.com/@mentesfuertesacademia?_t=ZM-8t7ndKEJcIA&_r=1" target="_blank" title="Síguenos en TikTok">
+            <img src="icons8-tik-tok-50.png" alt="TikTok" style="width: 30px;">
+        </a>
+        <p>&copy; 2025 Campamento Mentes Fuertes. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
