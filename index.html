@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campamento Mentes Fuertes</title>
+    <title>Campamento Mentes Fuertes</title>    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         body {
@@ -34,13 +34,14 @@
 
         header h1 {
             font-size: 2.8rem;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             font-weight: bold;
         }
 
         header p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
+            margin-bottom: 90px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         .btn {
@@ -48,7 +49,7 @@
             color: #1836b2;
             text-decoration: none;
             padding: 10px 20px;
-            border-radius: 25px;
+            border-radius: 25px;         
             font-size: 1rem;
             font-weight: bold;
             transition: background-color 0.3s, color 0.3s;
@@ -64,11 +65,20 @@
             justify-content: center;
             gap: 20px;
             margin: 30px 0;
+            margin-top: 60px;
+
+            
         }
 
         .countdown div {
             text-align: center;
             color: #ffffff;
+            background: #a066cb;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         .countdown div span {
@@ -83,45 +93,92 @@
         }
 
         .details {
-            background: #1836b2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2) url('camp4.jpg') no-repeat center center / cover;
+            padding: 50px 20px;
+            text-align: center;
             color: #ffffff;
         }
 
-        .details img {
-            width: 100%;
-            max-width: 800px;
-            border-radius: 15px;
-            margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
+        .details-content {
+            flex: 1;
+            max-width: 45%;
+            padding-right: 20px;
         }
 
-        .details img:hover {
-            transform: scale(1.05);
+        .details h1{            
+            line-height: 1.8;
+            margin: 10px 20px;
+            max-width: 300px; 
+            background-color: rgba(52, 50, 197, 0.7);
+            padding: 10px;
+            border-radius: 10px;
         }
 
         .details p {
             font-size: 1.2rem;
             line-height: 1.8;
+            margin: 10px 20px;
+            max-width: 300px; 
+            background-color: rgba(52, 50, 197, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .details .info-icons div {
+            text-align: center;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            
         }
 
         .info-icons {
+            flex: 1;
+            max-width: 17%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
+            gap: 20px;            
         }
+
 
         .info-icons div {
             text-align: center;
-            color: #ffffff;
+            color: #ffffff;            
         }
 
         .info-icons div i {
             font-size: 2rem;
             margin-bottom: 10px;
         }
+
+        .contact {
+            background: #1836b2;
+            color: #ffffff;
+        }
+        .contact h2 {
+            text-align: center; /* Título centrado */
+        }
+
+        .icon-contact {
+            display: flex;
+            justify-content: space-around; 
+            
+        }
+
+        .icon-contact div {
+            text-align: center;
+            color: #ffffff;            
+        }
+
+        .icon-contact div i {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
 
         footer {
             text-align: center;
@@ -218,14 +275,19 @@
     <nav>
         <a href="#"><i class="fas fa-home"></i></a>
         <a href="#details"><i class="fas fa-info-circle"></i></a>
-        <a href="mailto:aspirantes@academiamentesfuertes.com"><i class="fas fa-envelope"></i></a>
+        <a href="#contact"><i class="fas fa-envelope"></i></a>
     </nav>
 
-    <header>
+    <header style="background: rgba(0, 0, 0, 0.5) url('fondo1.png') no-repeat center center / cover;">
+        <br>
+        <br>
         <div class="date-banner">31 Enero 2025 | Torreón, Coahuila</div>
-        <h1>Campamento Mentes Fuertes</h1>
-        <p>¡Prepárate para una experiencia inolvidable!</p>
-        <a href="#details" class="btn">Conoce más</a>
+        <div>
+            <img src="logoBlanco.png" alt="" style="height: 100px;">
+        </div>        
+        <h2>2ª generación</h2>
+        <p># LA MEJOR VERSIÓN </p>
+        <a href="#details" class="btn" >Conoce más</a>
 
         <div class="countdown">
             <div>
@@ -245,39 +307,56 @@
                 Segundos
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
     </header>
 
     <section class="details" id="details">
-        <h2>Detalles del Campamento</h2>
-        <p>¡Únete a nosotros!</p>
+        
+        <div class="details-content">
+            <h1>Detalles del evento</h1>
+            <p>Bienvenido a la 2ª generación de Mentes Fuertes, un llamado a los jóvenes con ansias de grandeza. Forja tu carácter, templa tu espíritu y despierta la gallardía que define a los líderes. Atrévete a enfrentar retos que transformarán tu fortaleza en un legado de excelencia.</p>
+        </div>
 
-        <div class="info-icons">
+
+        <div class="info-icons">            
             <div>
-                <i class="fas fa-map-marker-alt"></i>
-                <p>Torreón, Coahuila</p>
+                <i class="fas fa-calendar"></i>
+                <p>31 Enero 2025</p>
             </div>
             <div>
                 <i class="fas fa-clock"></i>
                 <p>6:00 PM</p>
-            </div>  
+            </div> 
             <div>
-                <i class="fas fa-envelope"></i>
-                <p><a href="mailto:aspirantes@academiamentesfuertes.com" style="color: #ffffff; text-decoration: underline;">aspirantes@academiamentesfuertes.com</a></p>
-            </div>
-            <div>
-                <i class="fab fa-whatsapp"></i>
-                <p><a href="https://wa.me/1234567890" style="color: #ffffff; text-decoration: underline;">WhatsApp</a></p>
-            </div>
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Torreón, Coahuila</p>
+            </div>             
         </div>
-
-        <img src="https://via.placeholder.com/800x400" alt="Campamento">
     </section>
 
+    <section class="contact" id="contact">
+        
+        <br>
+        <div class="icon-contact">
+            <div>
+                <h2 style="text-align: center;">Contáctanos</h2>
+                <i class="fas fa-envelope"></i>
+                <p>aspirantes@academiamentesfuertes.com</p>
+            </div>
+            <div>
+                <h2 style="text-align: center;">Síguenos</h2>
+                <i class="fab fa-tiktok"></i>
+                <p><a href="https://www.tiktok.com/@mentesfuertesacademia?_t=ZM-8t7ndKEJcIA&_r=1" style="color: #ffffff;" target="_blank">AcademiaMF</a></p>
+            </div>
+        </div>
+    </section>
+
+
     <footer>
-        <a href="https://www.tiktok.com/@mentesfuertesacademia?_t=ZM-8t7ndKEJcIA&_r=1" target="_blank" title="Síguenos en TikTok">
-            <img src="icons8-tik-tok-50.png" alt="TikTok" style="width: 30px;">
-        </a>
-        <p>&copy; 2025 Campamento Mentes Fuertes. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Mentes Fuertes. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
