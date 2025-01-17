@@ -6,393 +6,8 @@
     <title>Academia Mentes Fuertes</title>    
     <link rel="icon" href="favicon.png" type="image/png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #000;
-            overflow-x: hidden;
-        }
-
-        header {
-            background: #1836b2;
-            color: #ffffff;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        header img {
-            height: 100px; 
-        }
-
-        header .date-banner {
-            background: #a066cb;
-            color: #ffffff;
-            font-weight: bold;
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 25px;
-            font-weight: bold;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 50px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .btn {
-            background-color: #ffffff;
-            color: #1836b2;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 25px;         
-            font-size: 1rem;
-            font-weight: bold;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #a066cb;
-            color: #ffffff;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 30px 0;
-            margin-top: 60px;        
-        }
-
-        .countdown div {
-            text-align: center;
-            color: #ffffff;
-            background: #a066cb;
-            color: #ffffff;
-            font-weight: bold;
-            padding: 5px 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .countdown div span {
-            display: block;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .details {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.2) url('camp4.jpg') no-repeat center center / cover;
-            padding: 50px 20px;
-            text-align: center;
-            color: #ffffff;
-        }
-
-        .details-content {
-            flex: 1;
-            max-width: 45%;
-            padding-right: 20px;
-        }
-
-        .details h1{            
-            line-height: 1.8;
-            margin: 10px 20px;
-            max-width: 300px; 
-            background-color: rgba(52, 50, 197, 0.7);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .details p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin: 10px 20px;
-            max-width: 300px; 
-            background-color: rgba(52, 50, 197, 0.7);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .details .info-icons div {
-            text-align: center;
-            color: #ffffff;
-            padding: 10px;
-            border-radius: 10px;
-            
-        }
-
-        .info-icons {
-            flex: 1;
-            max-width: 17%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;            
-        }
-
-
-        .info-icons div {
-            text-align: center;
-            color: #ffffff;            
-        }
-
-        .info-icons div i {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .contact {
-            background: #1836b2;
-            color: #ffffff;
-        }
-        .contact h2 {
-            text-align: center; /* Título centrado */
-        }
-
-        .icon-contact {
-            display: flex;
-            justify-content: space-around; 
-            
-        }
-
-        .icon-contact div {
-            text-align: center;
-            color: #ffffff;            
-        }
-
-        .icon-contact div i {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #ffffff;
-            color: #1836b2;
-        }
-
-        footer a {
-            color: #1836b2;
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #0c1b57;
-        }
-
-        footer p {
-            margin: 10px 0 0;
-            font-size: 0.9rem;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #1836b2;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        nav a {
-            color: #ffffff;
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #a066cb;
-        }
-        @media (max-width: 768px) {
-        header img {
-            height: 60px;
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-        }
-
-        header p {
-            font-size: 1rem;
-        }
-
-        .countdown {
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .countdown div {
-            font-size: 0.9rem;
-            padding: 8px;
-            width: 70px;
-        }
-
-        .countdown span {
-            font-size: 1.5rem;
-        }
-
-        section.details {
-            padding: 20px 10px;
-        }
-
-        .details-content {
-            margin-bottom: 15px;
-            flex-direction: row;
-        }
-
-        .info-icons {
-            align-items: center;
-        }
-        .details {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 20px;
-            text-align: center;
-            flex-direction: column;
-        }
-
-        .details-content {
-            flex: 1;
-            max-width: 100%;
-            padding-right: 20px;
-        }
-
-        .details h1{            
-            line-height: 1.8;
-            margin: 10px 20px;
-            max-width: 500px; 
-            background-color: rgba(52, 50, 197, 0.7);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .details p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin: 10px 20px;
-            max-width: 500px; 
-            background-color: rgba(52, 50, 197, 0.7);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .details .info-icons div {
-            text-align: center;
-            color: #ffffff;
-            padding: 10px;
-            border-radius: 10px;
-            
-        }
-
-        .info-icons {
-            flex: 1;
-            max-width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;            
-        }
-
-
-        .info-icons div {
-            text-align: center;
-            color: #ffffff;            
-        }
-
-        .info-icons div i {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-
-        section.contact .icon-contact {
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .icon-contact div {
-            flex: 1 1 auto;
-            width: 100%;
-        }
-
-        footer {
-            font-size: 0.8rem;
-        }
-    }
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
-    </style>
-    <script>
-        function startCountdown() {
-            const targetDate = new Date('2025-01-31T18:00:00');
-            const countdownElements = {
-                days: document.getElementById('days'),
-                hours: document.getElementById('hours'),
-                minutes: document.getElementById('minutes'),
-                seconds: document.getElementById('seconds')
-            };
-
-            function updateCountdown() {
-                const now = new Date();
-                const timeDiff = targetDate - now;
-
-                if (timeDiff <= 0) {
-                    clearInterval(interval);
-                    countdownElements.days.textContent = '0';
-                    countdownElements.hours.textContent = '0';
-                    countdownElements.minutes.textContent = '0';
-                    countdownElements.seconds.textContent = '0';
-                    return;
-                }
-
-                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-                countdownElements.days.textContent = days;
-                countdownElements.hours.textContent = hours;
-                countdownElements.minutes.textContent = minutes;
-                countdownElements.seconds.textContent = seconds;
-            }
-
-            const interval = setInterval(updateCountdown, 1000);
-            updateCountdown();
-        }
-
-        document.addEventListener('DOMContentLoaded', startCountdown);
-    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"> </script>
 </head>
 <body>
     <nav>
@@ -401,12 +16,13 @@
         <a href="#contact"><i class="fas fa-envelope"></i></a>
     </nav>
 
-    <header style="background: rgba(0, 0, 0, 0.5) url('fondo1.png') no-repeat center center / cover;">
+    <header style="background: rgba(0, 0, 0, 0.5) url('/imgs/fondo1.png') no-repeat center center / cover;">
         <br>
         <br>
-        <div class="date-banner">31 Enero 2025 | Torreón, Coahuila</div>
+        <div class="date-banner">31 Enero 2025 | Torreón, Coahuila
+        </div>
         <div>
-            <img src="logoBlanco.png" alt="">
+            <img src="/imgs/logoBlanco.png" alt="">
         </div>        
         <h1>2ª generación</h1>
         <p># TuMejorVersión </p>
@@ -441,7 +57,6 @@
             <p>Bienvenido a la 2ª generación de Mentes Fuertes, un llamado a los jóvenes mexicanos con ansias de grandeza. Forja tu carácter, templa tu espíritu y despierta la gallardía que define a los líderes. Atrévete a enfrentar retos que transformarán tu fortaleza en un legado de excelencia.</p>
         </div>
 
-
         <div class="info-icons">            
             <div>
                 <i class="fas fa-calendar"></i>
@@ -458,6 +73,53 @@
         </div>
     </section>
 
+    <section id="skills" class="skills-section">
+        <h2 class="fade-in">Perfil de Egreso</h2>
+        <div class="skills-container">
+            <div class="skills-row">
+
+                <div class="skills-column fade-in">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Dominio de temperamentos</li>
+                        <li>Control de emociones</li>
+                        <li>Expectativa personal</li>
+                        <li>Generación de hábitos</li>
+                        <li>Práctica de liderazgo</li>
+                        <li>Trabajo en equipo</li>
+                    </ul>
+                </div>
+                <div class="image-column fade-in">
+                    <div class="image-slider">
+                        <img src="/imgs/softskills1.jpg" alt="Soft Skills Image 1" class="active">
+                        <img src="/imgs/softskills2.png" alt="Soft Skills Image 2">
+                        <img src="/imgs/softskills3.webp" alt="Soft Skills Image 3">                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="skills-row">
+                <div class="image-column fade-in">
+                    <div class="image-slider">
+                        <img src="/imgs/hardskills1.jpg" alt="Hard Skills Image 1" class="active">
+                        <img src="/imgs/hardskills2.png" alt="Hard Skills Image 2">
+                        <img src="/imgs/hardskills3.avif" alt="Hard Skills Image 3">
+                    </div>
+                </div>
+                <div class="hard-skills-column  fade-in">
+                    <h3 class="fade-in">Hard Skills</h3>
+                    <ul>
+                        <li>Habilidad para hablar en público (oratoria)</li>
+                        <li>Fundamentos de programación de software</li>
+                        <li>Fundamentos de nutrición y cuidados en la salud</li>
+                        <li>Plan de ejercicio personal y cuidados de la salud</li>
+                        <li>Defensa personal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section class="contact" id="contact">
         
         <br>
@@ -477,7 +139,9 @@
 
 
     <footer>
-        <p>&copy; 2025 Mentes Fuertes. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Mentes Fuertes. 
+            <img src="/imgs/mex.png" alt="" style="height: 10px">
+            Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
