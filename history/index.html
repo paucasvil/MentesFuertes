@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea del Tiempo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timeline-container">
+        <div class="timeline"></div>
+
+        <div class="branch branch-left" style="top: 50px;">
+            <div class="event" onclick="showDetails('mexico')">
+                <img src="imgs/1810mx.png" alt="Evento México">
+            </div>
+        </div>
+
+        <div class="branch branch-left" style="top: 150px;">
+            <div class="event" onclick="showDetails('europa')">
+                <img src="https://via.placeholder.com/50" alt="Evento Europa">
+            </div>
+        </div>
+
+        <div class="branch branch-left" style="top: 250px;">
+            <div class="event" onclick="showDetails('vaticano')">
+                <img src="https://via.placeholder.com/50" alt="Evento Vaticano">
+            </div>
+        </div>
+
+        <div class="branch branch-right" style="top: 350px;">
+            <div class="event" onclick="showDetails('mexico_1821')">
+                <img src="https://via.placeholder.com/50" alt="Evento México 1821">
+            </div>
+        </div>
+
+        <div class="branch branch-right" style="top: 450px;">
+            <div class="event" onclick="showDetails('europa_1821')">
+                <img src="https://via.placeholder.com/50" alt="Evento Europa 1821">
+            </div>
+        </div>
+
+        <div class="branch branch-right" style="top: 550px;">
+            <div class="event" onclick="showDetails('vaticano_1821')">
+                <img src="https://via.placeholder.com/50" alt="Evento Vaticano 1821">
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeModal()"></div>
+
+    <div class="modal" id="modal">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+    </div>
+
+    <script>
+        const data = {
+            mexico: {
+                title: "Independencia de México",
+                description: "En 1810, Miguel Hidalgo da inicio al movimiento de independencia con el Grito de Dolores."
+            },
+            europa: {
+                title: "Napoleón domina Europa",
+                description: "En 1810, Napoleón Bonaparte consolida su poder en gran parte de Europa."
+            },
+            vaticano: {
+                title: "Reconstrucción en el Vaticano",
+                description: "En 1810, se inician trabajos de reconstrucción en la Ciudad del Vaticano tras conflictos previos."
+            },
+            mexico_1821: {
+                title: "Consumación de la Independencia",
+                description: "En 1821, México logra su independencia con la entrada del Ejército Trigarante a la Ciudad de México."
+            },
+            europa_1821: {
+                title: "Congreso de Verona",
+                description: "En 1821, las potencias europeas se reúnen para discutir el futuro de Europa tras las guerras napoleónicas."
+            },
+            vaticano_1821: {
+                title: "Finalización de la Capilla Sixtina",
+                description: "En 1821, culminan trabajos importantes en la Capilla Sixtina, consolidándola como una obra maestra."
+            }
+        };
+
+        function showDetails(key) {
+            const modal = document.getElementById('modal');
+            const overlay = document.getElementById('overlay');
+            const title = document.getElementById('modal-title');
+            const description = document.getElementById('modal-description');
+
+            title.textContent = data[key].title;
+            description.textContent = data[key].description;
+
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            const overlay = document.getElementById('overlay');
+
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
