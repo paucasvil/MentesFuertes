@@ -79,3 +79,29 @@ body {
 .nav-btn:hover {
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+    .scoreboard-container {
+        flex-direction: row; 
+        gap: 15px;
+    }
+    .team-card {
+        width: 180px; 
+        height: 280px;
+        padding: 15px;
+    }
+
+    .team-name {
+        font-size: 24px;
+    }
+
+    .team-points, .team-place, .team-members {
+        font-size: 18px;
+    }
+
+    .nav-btn {
+        font-size: 1.8rem;
+        width: 25px;
+        height: 55px;
+    }
+}
