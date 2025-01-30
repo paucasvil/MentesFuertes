@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de puntos</title>
+    <link rel="stylesheet" href="stylesScoreboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="scoreboard-container">
+        <button id="prev-btn" class="nav-btn">
+            <i class='bx bxs-chevron-left bx-tada' ></i>
+        </button>
+        <div class="team-card" id="card">
+            <div class="team-name" id="team-name">Equipo Águilas</div>
+            <div class="team-members">
+                <h3>Integrantes:</h3>
+                <ul id="team-members" ></ul>
+            </div>
+            <div class="team-points" id="team-points">Puntos: 120</div>
+            <div class="team-place" id="team-place">Lugar: 1°</div>
+        </div>
+        <button id="next-btn" class="nav-btn">
+            <i class='bx bxs-chevron-right bx-tada' ></i>
+        </button>
+    </div>
+
+    <script src="scriptScoreboard.js"></script>
+</body>
+</html>

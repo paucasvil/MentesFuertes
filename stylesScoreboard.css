@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imgs/scoreboardOpt1.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.scoreboard-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.team-card {
+    background: linear-gradient(135deg, #4c78af, #18226d);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 20px;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+.team-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.team-members ul {
+    list-style-type: none;
+    padding: 0;    
+}
+
+.team-members {    
+    font-size: 22px;
+}
+
+.team-points {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.team-place {
+    font-size: 22px;
+    font-style: italic;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    color: black;
+    font-size: 2rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+}
